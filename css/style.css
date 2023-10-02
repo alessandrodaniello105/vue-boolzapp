@@ -15,9 +15,23 @@ body {
   height: 100vh;
 }
 
+.debug {
+  border: 1px solid black;
+}
+
+
+
+.row {
+  height: 100%;
+}
+
+.row [class^='col'] {
+  padding: 0;
+}
+
 .main-wrapper {
   height: 100%;
-  background-image: linear-gradient(0deg, var(--bg-grey) 0 85%, var(--bg-green) 85% 100%);
+  background: linear-gradient(0deg, var(--bg-grey) 0 85%, var(--bg-green) 85% 100%);
 }
 
 .main-wrapper .container-ctm {
@@ -29,15 +43,42 @@ body {
   margin: auto;
 }
 
-.main-wrapper .container-ctm aside {
-  width: 30%;
-  min-width: 380px;
+aside {
+  /* width: 30%; */
+  /* min-width: 380px; */
+  height: 100%;
+  border: 1px solid black;
+
+}
+
+content {
+  width: 100%;
   height: 100%;
   border: 1px solid black;
 }
 
-.main-wrapper .container-ctm content {
-  width: 70%;
-  height: 100%;
-  border: 1px solid black;
+
+/***** ASIDE *****/
+aside  .user-bar {
+  height: 70px;
+}
+
+aside .notify-bar {
+  height: 82px;
+  background-color: #8EDAFC;
+}
+
+aside .search-bar {
+padding: 5px;
+}
+
+aside .contacts {
+  overflow-y: scroll;
+
+}
+
+
+/***** CONTENT *****/
+content > .user-bar {
+  height: 70px;
 }
