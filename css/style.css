@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   height: 100vh;
 }
 
@@ -42,6 +42,29 @@ img.avatar {
 
 .row [class^='col'] {
   padding: 0;
+}
+
+/* TEXT-BOX */
+.text-box {
+  width: calc(100% - 50px);
+  height: 100%;
+  padding-left: 10px;
+}
+
+.text-box .sub-text {
+  height: 50%;
+  line-height: normal;
+}
+
+.text-box .sub-text a {
+  color: #54748F;
+  font-size: .9rem;
+  letter-spacing: -1px;
+}
+
+.text-box .sub-text:first-child {
+  line-height: 65px;
+  /* font-weight: 600; */
 }
 
 
@@ -132,29 +155,6 @@ aside .aside-top .notify-bar .img-box {
   border-radius: 50%;
 }
 
-aside .aside-top .notify-bar .text-box {
-  width: calc(100% - 50px);
-  height: 100%;
-  padding-left: 10px;
-}
-
-aside .aside-top .notify-bar .text-box .sub-text {
-  height: 50%;
-  line-height: normal;
-}
-
-aside .aside-top .notify-bar .text-box .sub-text a {
-  color: #54748F;
-  font-size: .9rem;
-  letter-spacing: -1px;
-}
-
-aside .aside-top .notify-bar .text-box .sub-text:first-child {
-  line-height: 65px;
-  /* font-weight: 600; */
-
-}
-
 
 /***** SEARCH-BAR *****/
 aside .aside-top .search-bar {
@@ -171,12 +171,52 @@ aside .aside-top .search-bar .text-control_ctm {
   font-size: .9rem;
 }
 
+
+
 /* BOT */
 /***** CONTACTS-BAR *****/
-aside .aside-bot .contacts {
+aside .aside-bot .contacts-list {
   overflow-y: scroll;
+  background-color: white;
+  height: 100%;
+  align-content: flex-start;
 }
 
+aside .aside-bot .contacts-list .contact {
+  height: 82px;
+  border-top: 1px solid var(--icons-primary);
+  width: 100%;
+}
+
+aside .aside-bot .contacts-list .contact img.avatar {
+  height: 60px;
+  margin-left: 20px;
+}
+
+.contact .text-box {
+  width: calc(100% - 80px);
+}
+
+.contact .text-box .sub-text.contact-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.contact .text-box .sub-text.contact-last-msg {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--icons-primary);
+  line-height: 0;
+
+}
+
+.contact .contact-last-msg-time {
+  margin-right: 10px;
+  font-size: .7rem;
+  color: #B4B3B5;
+  font-weight: 700;
+}
 
 /**************** CONTENT ****************/
 content > .user-bar {
