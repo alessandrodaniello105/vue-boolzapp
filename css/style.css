@@ -20,6 +20,14 @@ body {
 }
 
 
+img.avatar {
+  height: 80%;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  margin: auto 0;
+}
+
 
 .row {
   height: 100%;
@@ -58,7 +66,8 @@ content {
 }
 
 
-/***** ASIDE *****/
+/**************** ASIDE ****************/
+/* TOP */
 aside .aside-top {
   height: 200px;
 }
@@ -68,15 +77,25 @@ aside .aside-bot {
   overflow-y: scroll;
 }
 
+
+/***** USER-BAR *****/
 aside .aside-top .user-bar {
   height: 70px;
 }
 
+aside .aside-top .user-bar .img-box {
+  height: 100%;
+}
+
+
+/***** NOTIFY-BAR *****/
 aside .aside-top .notify-bar {
   height: 82px;
   background-color: #8EDAFC;
 }
 
+
+/***** SEARCH-BAR *****/
 aside .aside-top .search-bar {
 padding: 5px;
 }
@@ -91,12 +110,14 @@ aside .aside-top .search-bar .text-control_ctm {
   font-size: .9rem;
 }
 
-aside .aside-top .contacts {
+/* BOT */
+/***** CONTACTS-BAR *****/
+aside .aside-bot .contacts {
   overflow-y: scroll;
 }
 
 
-/***** CONTENT *****/
+/**************** CONTENT ****************/
 content > .user-bar {
   height: 70px;
 }
