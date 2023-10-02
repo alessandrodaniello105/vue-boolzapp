@@ -124,15 +124,22 @@ aside .aside-top .user-bar .img-box {
   padding-left: 10px;
 }
 
-aside .aside-top .user-bar .right-icons {
+.user-bar .right-icons {
   float: right;
   height: 100%;
   width: 150px;
   font-size: 1.3rem;
-  color: var(--icons-primary)
+  color: var(--icons-primary);
+}
+.user-bar .right-icons i {
+  vertical-align: middle;
 }
 
-aside .aside-top .user-bar .right-icons .icon-box {
+.user-bar .right-icons .fa-ellipsis-vertical {
+  font-size: 28px;
+}
+
+.user-bar .right-icons .icon-box {
   width: 45px;
   cursor: pointer;
   text-align: center;
@@ -205,16 +212,24 @@ aside .aside-bot .contacts-list .contact {
 
 .contact .text-box .sub-text.contact-name {
   font-weight: 600;
-  font-size: 1.1rem;
   line-height: 2rem;
+  padding-top: 5px;
+}
+
+.contact .text-box .sub-text.contact-name,
+content > .user-bar .text-box .sub-text.contact-name {
+  font-size: 1.1rem;
 }
 
 .contact .text-box .sub-text.contact-last-msg {
+  line-height: 0;
+  color: var(--icons-primary);
+}
+
+.contact .text-box .sub-text.contact-last-msg,
+content > .user-bar .text-box .sub-text.last-access {
   font-size: .9rem;
   font-weight: 600;
-  color: var(--icons-primary);
-  line-height: 0;
-
 }
 
 .contact .contact-last-msg-time {
@@ -234,6 +249,36 @@ content > .user-bar {
   height: 70px;
 }
 
+content > .user-bar .img-box {
+  padding-left: 10px;
+}
+
+
+content > .user-bar .text-box {
+  height: 100%;
+}
+
+content > .user-bar .text-box .sub-text {
+  height: 50%;
+  line-height: normal;
+  padding-top: 5px;
+}
+
+content > .user-bar .text-box .sub-text.contact-name {
+  font-size: 1.1rem;
+  line-height: 3rem;
+}
+
+content > .user-bar .text-box .sub-text.last-access {
+  padding-top: 5px;
+  color: #969C9E;
+}
+
+content > .user-bar .right-icons {
+  padding-right: 10px;
+}
+
+
 content .conv {
   height: 100%;
 }
@@ -242,6 +287,7 @@ content .conv .conversation-box {
   height: calc(100% - 140px);
   background-image: url('../img/mine.jpg');
   overflow-y: auto;
+  padding: 10px 20px 10px 10px;
 }
 
 content .conv .send-message-box {
