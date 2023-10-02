@@ -81,9 +81,18 @@ aside .aside-top .search-bar {
 padding: 5px;
 }
 
+aside .aside-top .search-bar .input-group-text_ctm {
+  padding: .375rem 1.75rem;
+  background-color: #ffffff;
+  color: #B4B3B5;
+}
+
+aside .aside-top .search-bar .text-control_ctm {
+  font-size: .9rem;
+}
+
 aside .aside-top .contacts {
   overflow-y: scroll;
-
 }
 
 
