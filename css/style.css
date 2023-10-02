@@ -2,6 +2,8 @@
   --bg-green: #009688;
   --bg-grey: #D5DBD7;
   --bg-light-grey: #EAEAEA;
+  --bg-active: #E9EBEB;
+
   --icons-primary: #B1B1B1;
 }
 
@@ -184,11 +186,15 @@ aside .aside-bot .contacts-list {
 
 aside .aside-bot .contacts-list .contact {
   height: 82px;
-  border-top: 1px solid var(--icons-primary);
+  border-top: 1px solid #F8F8F8;
   width: 100%;
 }
 
-aside .aside-bot .contacts-list .contact img.avatar {
+.contact.active {
+  background-color: var(--bg-active);
+}
+
+.contact img.avatar {
   height: 60px;
   margin-left: 20px;
 }
@@ -213,10 +219,15 @@ aside .aside-bot .contacts-list .contact img.avatar {
 
 .contact .contact-last-msg-time {
   margin-right: 10px;
-  font-size: .7rem;
+  margin-top: 5px;
+  font-size: .75rem;
   color: #B4B3B5;
   font-weight: 700;
 }
+
+
+
+
 
 /**************** CONTENT ****************/
 content > .user-bar {
