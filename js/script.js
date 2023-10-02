@@ -1,3 +1,9 @@
-const helloW = document.querySelector('h1')
+const {createApp} = Vue;
 
-helloW.innerHTML = 'Hello World!'
+createApp({
+  data() {
+    return {
+
+    }
+  }
+}).mount('#app')
