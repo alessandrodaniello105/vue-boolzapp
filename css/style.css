@@ -24,7 +24,7 @@ body {
 
 
 img.avatar {
-  height: 80%;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
@@ -87,12 +87,17 @@ aside .aside-bot {
   overflow-y: scroll;
 }
 
+
+
 /* TOP */
 /***** USER-BAR *****/
 aside .aside-top .user-bar {
   height: 70px;
 }
 
+aside .aside-top .user-bar .img-box {
+  padding-left: 10px;
+}
 
 aside .aside-top .user-bar .right-icons {
   float: right;
@@ -102,6 +107,11 @@ aside .aside-top .user-bar .right-icons {
   color: var(--icons-primary)
 }
 
+aside .aside-top .user-bar .right-icons .icon-box {
+  width: 45px;
+  cursor: pointer;
+  text-align: center;
+}
 
 
 /***** NOTIFY-BAR *****/
@@ -170,5 +180,19 @@ aside .aside-bot .contacts {
 
 /**************** CONTENT ****************/
 content > .user-bar {
+  height: 70px;
+}
+
+content .conv {
+  height: 100%;
+}
+
+content .conv .conversation-box {
+  height: calc(100% - 140px);
+  background-image: url('../img/mine.jpg');
+  overflow-y: auto;
+}
+
+content .conv .send-message-box {
   height: 70px;
 }
