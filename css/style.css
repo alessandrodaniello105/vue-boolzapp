@@ -18,6 +18,10 @@ body {
   height: 100vh;
 }
 
+/* 
+i.fa-solid {
+  font-size: 25px;
+} */
 
 /* UTILITIES */
 .debug {
@@ -195,6 +199,7 @@ aside .aside-bot .contacts-list .contact {
   height: 82px;
   border-top: 1px solid #F8F8F8;
   width: 100%;
+  cursor: pointer;
 }
 
 .contact.active {
@@ -278,18 +283,34 @@ content > .user-bar .right-icons {
   padding-right: 10px;
 }
 
-
+/* 
 content .conv {
-  height: 100%;
-}
+  height: calc(100% - 70px);
+} */
 
-content .conv .conversation-box {
+content .conversation-box {
   height: calc(100% - 140px);
   background-image: url('../img/mine.jpg');
   overflow-y: auto;
   padding: 10px 20px 10px 10px;
 }
 
-content .conv .send-message-box {
+content .send-message-box {
   height: 70px;
+}
+
+content .send-message-box i {
+  font-size: 25px;
+  color: #737374;
+}
+
+content .send-message-box .message-input-text {
+  height: 70%;
+  border-radius: 5px;
+  border: 0px;
+  padding-left: 10px;
+}
+
+content .send-message-box .message-input-text:focus-visible {
+  box-shadow: none;
 }
