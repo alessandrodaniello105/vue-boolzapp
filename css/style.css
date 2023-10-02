@@ -59,20 +59,29 @@ content {
 
 
 /***** ASIDE *****/
-aside  .user-bar {
+aside .aside-top {
+  height: 200px;
+}
+
+aside .aside-bot {
+  height: calc(100% - 200px);
+  overflow-y: scroll;
+}
+
+aside .aside-top .user-bar {
   height: 70px;
 }
 
-aside .notify-bar {
+aside .aside-top .notify-bar {
   height: 82px;
   background-color: #8EDAFC;
 }
 
-aside .search-bar {
+aside .aside-top .search-bar {
 padding: 5px;
 }
 
-aside .contacts {
+aside .aside-top .contacts {
   overflow-y: scroll;
 
 }
