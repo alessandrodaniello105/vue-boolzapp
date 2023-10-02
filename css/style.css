@@ -2,6 +2,7 @@
   --bg-green: #009688;
   --bg-grey: #D5DBD7;
   --bg-light-grey: #EAEAEA;
+  --icons-primary: #B1B1B1;
 }
 
 * {
@@ -67,9 +68,10 @@ content {
 
 
 /**************** ASIDE ****************/
-/* TOP */
+
 aside .aside-top {
   height: 200px;
+  line-height: 70px;
 }
 
 aside .aside-bot {
@@ -77,7 +79,7 @@ aside .aside-bot {
   overflow-y: scroll;
 }
 
-
+/* TOP */
 /***** USER-BAR *****/
 aside .aside-top .user-bar {
   height: 70px;
@@ -86,6 +88,15 @@ aside .aside-top .user-bar {
 aside .aside-top .user-bar .img-box {
   height: 100%;
 }
+
+aside .aside-top .user-bar .right-icons {
+  float: right;
+  height: 100%;
+  width: 150px;
+  font-size: 1.3rem;
+  color: var(--icons-primary)
+}
+
 
 
 /***** NOTIFY-BAR *****/
