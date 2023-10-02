@@ -3,6 +3,8 @@
   --bg-grey: #D5DBD7;
   --bg-light-grey: #EAEAEA;
   --bg-active: #E9EBEB;
+  --bg-sent-msg: #D5F9BA;
+  --bg-received-msg: #FFFFFF;
 
   --icons-primary: #B1B1B1;
 }
@@ -294,6 +296,31 @@ section .conversation-box {
   overflow-y: auto;
   padding: 10px 20px 10px 10px;
 }
+
+.conversation-box .container_ctm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.conversation-box .message {
+  padding: 10px 15px;
+  min-height: 60px;
+  max-width: 400px;
+  width: fit-content;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.conversation-box .message.sent-msg {
+  background-color: var(--bg-sent-msg);
+  align-self: flex-end;
+}
+
+.conversation-box .message.received-msg {
+  background-color: var(--bg-received-msg);
+}
+
+
 
 section .send-message-box {
   height: 70px;
