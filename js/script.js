@@ -5,6 +5,11 @@ const dt = initDate.now();
 const day = String(dt.day).padStart(2, '0');
 const month = String(dt.month).padStart(2, '0');
 const year = String(dt.year);
+const myDate = {
+  day: day,
+  month: month,
+  year: year
+}
 
 let message;
 
@@ -29,7 +34,8 @@ createApp({
       activeContact: '',
       inputMessage: '',
       chatContainer,
-      dt
+      dt,
+      myDate
     }
   },
 
@@ -84,11 +90,17 @@ createApp({
 
   },
 
+  computed: {
+    date() {
+      return console.log(this.myDate.join('/'));
+    }
+  },
+
   mounted() {
     // console.log(this.contacts)
     this.activeContact = this.contacts[this.counter]
 
-    // console.log(dt.now().year); 
+    
 
   }
 }).mount('#app')
