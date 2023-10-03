@@ -120,7 +120,7 @@
               <div class="contacts-list d-flex flex-wrap">
 
                 <!-- SINGLE CONTACT -->
-                <div class="contact d-flex align-items-center">
+                <!-- <div class="contact d-flex align-items-center">
 
                   <img class="avatar" src="./img/avatar_1.jpg" alt="">
 
@@ -140,18 +140,18 @@
                     <span>12:00</span>
                   </div>
 
-                </div>
+                </div> -->
                 <!-- /SINGLE CONTACT -->
 
-                <!-- SINGLE ACTIVE CONTACT -->
-                <div class="contact active d-flex align-items-center">
+                <!-- V-CYCLED CONTACTS -->
+                <div v-for="contact in contacts" class="contact d-flex align-items-center">
 
-                  <img class="avatar" src="./img/avatar_2.jpg" alt="">
+                  <img class="avatar" :src="contact.avatar" :alt="contact.name + ' avatar'">
 
                   
                   <div class="text-box d-flex flex-column">
 
-                    <div class="sub-text contact-name"><p>Michele</p></div>
+                    <div v-module="contact.name" class="sub-text contact-name"><p>{{ contact.name }}</p></div>
 
                     <div class="sub-text contact-last-msg">
                       <span>Ultimo messaggio inviato</span>
@@ -165,80 +165,9 @@
                   </div>
 
                 </div>
-                <!-- /SINGLE ACTIVE CONTACT -->
+                <!-- /SINGLE CONTACT -->
 
                 
-                <!-- SINGLE CONTACT -->
-                <div class="contact d-flex align-items-center">
-
-                  <img class="avatar" src="./img/avatar_3.jpg" alt="">
-
-                  
-                  <div class="text-box d-flex flex-column">
-
-                    <div class="sub-text contact-name"><p>Michele</p></div>
-
-                    <div class="sub-text contact-last-msg">
-                      <span>Ultimo messaggio inviato</span>
-                    </div>
-
-                    
-                  </div>
-                  
-                  <div class="contact-last-msg-time time-msg align-self-start">
-                    <span>12:00</span>
-                  </div>
-
-                </div>
-                <!-- /SINGLE CONTACT -->
-                
-                <!-- SINGLE CONTACT -->
-                <div class="contact d-flex align-items-center">
-
-                  <img class="avatar" src="./img/avatar_4.jpg" alt="">
-
-                  
-                  <div class="text-box d-flex flex-column">
-
-                    <div class="sub-text contact-name"><p>Michele</p></div>
-
-                    <div class="sub-text contact-last-msg">
-                      <span>Ultimo messaggio inviato</span>
-                    </div>
-
-                    
-                  </div>
-                  
-                  <div class="contact-last-msg-time time-msg align-self-start">
-                    <span>12:00</span>
-                  </div>
-
-                </div>
-                <!-- /SINGLE CONTACT -->
-                
-                <!-- SINGLE CONTACT -->
-                <div class="contact d-flex align-items-center">
-
-                  <img class="avatar" src="./img/avatar_5.jpg" alt="">
-
-                  
-                  <div class="text-box d-flex flex-column">
-
-                    <div class="sub-text contact-name"><p>Michele</p></div>
-
-                    <div class="sub-text contact-last-msg">
-                      <span>Ultimo messaggio inviato</span>
-                    </div>
-
-                    
-                  </div>
-                  
-                  <div class="contact-last-msg-time time-msg align-self-start">
-                    <span>12:00</span>
-                  </div>
-
-                </div>
-                <!-- /SINGLE CONTACT -->
 
 
               </div>
