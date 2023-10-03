@@ -149,7 +149,6 @@
 
                 <!-- V-CYCLED CONTACTS -->
                 <div v-for="(contact, index) in contactsFiltered"
-                @keyup.enter="contactsFilter"
                 :class="{'active': counter === index && contact.visible === true}"
                 @click="myFunction(index)"
                 class="contact d-flex align-items-center"
