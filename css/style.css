@@ -355,7 +355,7 @@ section .send-message-box .message-input-text {
   height: 70%;
   border-radius: 5px;
   border: 0px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 section .send-message-box .message-input-text:focus-visible {
