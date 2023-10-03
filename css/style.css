@@ -216,7 +216,12 @@ aside .aside-bot .contacts-list .contact:hover {
   background-color: rgba(0, 0, 0, .03);
 }
 
-.contact.active {
+
+aside .aside-bot .contacts-list .contact.active {
+  background-color: var(--bg-active);
+}
+
+aside .aside-bot .contacts-list .contact.active:hover {
   background-color: var(--bg-active);
 }
 
