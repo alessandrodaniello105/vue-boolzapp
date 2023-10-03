@@ -5,16 +5,12 @@ const dt = initDate.now();
 const day = String(dt.day).padStart(2, '0');
 const month = String(dt.month).padStart(2, '0');
 const year = String(dt.year);
-const myDate = {
-  day: day,
-  month: month,
-  year: year
-}
+const myDate = day + '/' + month + '/' + year
 
-let message;
+// let message;
 
-message = day + '/' + month + '/' + year
-console.log(message);
+// message = day + '/' + month + '/' + year
+// console.log(message);
 
 // console.log(dt.now().year);
 
@@ -92,7 +88,7 @@ createApp({
 
   computed: {
     date() {
-      return console.log(this.myDate.join('/'));
+      return this.myDate;
     }
   },
 
