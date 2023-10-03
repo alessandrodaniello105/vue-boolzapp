@@ -17,6 +17,7 @@
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Lato', sans-serif;
   height: 100vh;
 }
 
@@ -115,7 +116,7 @@ aside .aside-top {
 
 aside .aside-bot {
   height: calc(100% - 200px);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 
@@ -189,12 +190,13 @@ aside .aside-top .search-bar .text-control_ctm {
 
 
 /* BOT */
-/***** CONTACTS-BAR *****/
+/***** CONTACTS *****/
 aside .aside-bot .contacts-list {
-  overflow-y: scroll;
   background-color: white;
   height: 100%;
   align-content: flex-start;
+  overflow-y: scroll;
+
 }
 
 aside .aside-bot .contacts-list .contact {
@@ -203,6 +205,7 @@ aside .aside-bot .contacts-list .contact {
   height: 82px;
   border-top: 1px solid #F8F8F8;
   cursor: pointer;
+
 }
 
 .contact.active {
@@ -296,7 +299,7 @@ section .conv {
 section .conversation-box {
   height: calc(100% - 140px);
   background-image: url('../img/mine.jpg');
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 10px 20px 10px 10px;
 }
 
