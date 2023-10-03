@@ -5,6 +5,7 @@
   --bg-active: #E9EBEB;
   --bg-sent-msg: #D5F9BA;
   --bg-received-msg: #FFFFFF;
+  --bg-blank: #212E35;
 
   --icons-primary: #B1B1B1;
 }
@@ -109,6 +110,7 @@ section {
   width: 100%;
   height: 100%;
   /* border: 1px solid black; */
+  position: relative;
 }
 
 
@@ -309,6 +311,10 @@ section .conversation-box {
   padding: 10px 20px 10px 10px;
 }
 
+.conversation-box .chat-container {
+  position: relative;
+}
+
 .conversation-box .container_ctm {
   width: 80%;
   margin: 0 auto;
@@ -340,6 +346,18 @@ section .conversation-box {
   font-size: 10px;
 }
 
+
+section .blank-page {
+  background-color: var(--bg-blank);
+  background-image: url(../img/bg_blank.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 
 section .send-message-box {

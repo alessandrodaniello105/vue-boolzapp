@@ -195,9 +195,13 @@
 
           <!-- CONVERSATION/CONTENT SECTION -->
           <section class="col-8 content">
+
+            <div  v-if="activeContact === ''"  class="blank-page">
+
+            </div>
             
             <!-- ACTIVE CONTACT BAR  -->
-            <div class="user-bar d-flex">
+            <div v-else class="user-bar d-flex">
 
               <div class="img-box d-flex align-items-center float-start">
 
@@ -244,14 +248,20 @@
 
             <div class="conversation-box">
 
-              <div class="container_ctm d-flex flex-column">
+              <div class="container_ctm">
 
-                <div v-for="message in activeContact.messages" 
-                :class="isSent(message)"
-                
-                class="message">
-                  <span>{{message.message}}</span>
-                  <span class="time-msg">{{ message.date }}</span>
+                <!-- <div v-show="activeContact === 'blank'" class="blank-page">
+
+                </div> -->
+
+                <div class="chat-container d-flex flex-column">
+                  <div v-for="message in activeContact.messages" 
+                  :class="isSent(message)"
+                  
+                  class="message clearfix">
+                    <span>{{message.message}}</span>
+                    <span class="time-msg">{{ message.date }}</span>
+                </div>
                 </div>
 
                 <!-- <div class="sent-msg message">
@@ -274,7 +284,7 @@
             </div>
 
             <!-- INPUT MESSAGE BOX -->
-            <div class="send-message-box d-flex justify-content-evenly align-items-center">
+            <div  class="send-message-box d-flex justify-content-evenly align-items-center">
 
 
               <!-- EMOJI BUTTON -->

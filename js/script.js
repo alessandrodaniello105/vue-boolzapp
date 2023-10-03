@@ -33,7 +33,7 @@ createApp({
 
       contacts,
 
-      counter: 1,
+      counter: '',
 
       activeContact: '',
 
@@ -97,7 +97,7 @@ createApp({
           {
             date: this.myTime(),
             message: 'Ok',
-            status: 'received'
+            status: 'sent'
           },
   
         )
