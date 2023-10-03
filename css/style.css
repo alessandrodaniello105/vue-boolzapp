@@ -26,6 +26,10 @@ i.fa-solid {
   font-size: 25px;
 } */
 
+.icon-box {
+  cursor: pointer;
+}
+
 /* UTILITIES */
 .debug {
   border: 1px solid black;
@@ -149,7 +153,6 @@ aside .aside-top .user-bar .img-box {
 
 .user-bar .right-icons .icon-box {
   width: 45px;
-  cursor: pointer;
   text-align: center;
 }
 

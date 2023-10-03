@@ -242,7 +242,15 @@
 
               <div class="container_ctm d-flex flex-column">
 
-                <div class="sent-msg message">
+                <div v-for="message in activeContact.messages" 
+                :class="isSent(message)"
+                
+                class="message">
+                  <span>{{message.message}}</span>
+                  <span class="time-msg">01:23</span>
+                </div>
+
+                <!-- <div class="sent-msg message">
                   <span>messaggio corto</span>
                   <span class="time-msg">11:11</span>
                 </div>
@@ -255,7 +263,7 @@
                 <div class="received-msg message">
                   <span>messaggio di prova ricevuto</span>
                   <span class="time-msg">11:11</span>
-                </div>
+                </div> -->
 
               </div>
 
