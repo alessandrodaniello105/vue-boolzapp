@@ -1,12 +1,19 @@
 const { createApp } = Vue;
 
-const initDate = luxon.DateTime
+const initDate = luxon.DateTime;
 const dt = initDate.now();
+
 const day = String(dt.day).padStart(2, '0');
 const month = String(dt.month).padStart(2, '0');
 const year = String(dt.year);
-const myDate = day + '/' + month + '/' + year
+const myDate = day + '/' + month + '/' + year;
+// const myDate = dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
 
+const hour = String(dt.hour).padStart(2, '0');
+const minute = String(dt.minute).padStart(2, '0');
+const second = String(dt.second).padStart(2, '0');
+// const myTime =  hour + ':' + minute + ':' + second;
+// const myTime = dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
 // let message;
 
 // message = day + '/' + month + '/' + year
@@ -27,11 +34,17 @@ createApp({
       contacts,
 
       counter: 1,
+
       activeContact: '',
+
       inputMessage: '',
+
       chatContainer,
+
       dt,
-      myDate
+      myDate,
+      // myTime
+
     }
   },
 
@@ -53,50 +66,76 @@ createApp({
     myFunction(index) {
       this.counter = index;
 
-      this.contacts[this.counter].visible = true
-      this.activeContact = this.contacts[this.counter]
-      console.log(this.activeContact)
+      this.contacts[this.counter].visible = true;
+      this.activeContact = this.contacts[this.counter];
+      console.log(this.activeContact);
     },
 
     isSent(message) {
-      return (message.status === 'sent') ? 'sent-msg' : 'received-msg'
+      return (message.status === 'sent') ? 'sent-msg' : 'received-msg';
     },
 
     sendMsg() {
-      console.log(this.activeContact.messages)
+
+      console.log(this.activeContact.messages);
+
       this.activeContact.messages.push(
+
         {
-          date: '10/01/2020 15:50:00',
+          date: this.myTime(),
           message: this.inputMessage,
           status: 'sent'
-      },
+        },
+
       )
       
-      this.inputMessage = ''
+      this.inputMessage = '';
 
-      this.autoScroll()
+      setTimeout(() =>{
+        this.activeContact.messages.push(
+
+          {
+            date: this.myTime(),
+            message: 'Ok',
+            status: 'received'
+          },
+  
+        )
+      }, 1000)
+
+      this.autoScroll();
       
-      console.log(this.activeContact.messages)
+      console.log(this.activeContact.messages);
+
+    },
+
+    
+    myTime() {
+      return dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
     },
 
     autoScroll() {
-      window.scrollBy(100, 200)
-      
+      window.scrollBy(100, 200);      
     }
 
   },
 
   computed: {
+
     date() {
       return this.myDate;
-    }
+    },
+
+    
   },
 
   mounted() {
-    // console.log(this.contacts)
-    this.activeContact = this.contacts[this.counter]
 
-    
+    // console.log(this.contacts)
+
+    console.log(dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS))
+
+    this.activeContact = this.contacts[this.counter]
 
   }
 }).mount('#app')
