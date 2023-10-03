@@ -96,14 +96,15 @@ aside {
   /* width: 30%; */
   /* min-width: 380px; */
   height: 100%;
-  border: 1px solid black;
+  border-right: 1px solid var(--icons-primary);
+  /* border: 1px solid black; */
 
 }
 
 section {
   width: 100%;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 
