@@ -1,5 +1,18 @@
 const { createApp } = Vue;
 
+const initDate = luxon.DateTime
+const dt = initDate.now();
+const day = String(dt.day).padStart(2, '0');
+const month = String(dt.month).padStart(2, '0');
+const year = String(dt.year);
+
+let message;
+
+message = day + '/' + month + '/' + year
+console.log(message);
+
+// console.log(dt.now().year);
+
 const chatContainer = document.querySelector('.conversation-box')
 
 import { contacts } from "./contacts.js";
@@ -15,7 +28,8 @@ createApp({
       counter: 1,
       activeContact: '',
       inputMessage: '',
-      chatContainer
+      chatContainer,
+      dt
     }
   },
 
@@ -73,5 +87,8 @@ createApp({
   mounted() {
     // console.log(this.contacts)
     this.activeContact = this.contacts[this.counter]
+
+    // console.log(dt.now().year); 
+
   }
 }).mount('#app')
