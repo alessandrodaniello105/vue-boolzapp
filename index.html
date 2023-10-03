@@ -105,7 +105,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </span>
       
-                  <input type="text" class="form-control text-control_ctm" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                  <input v-model="inputSearch" type="text" class="form-control text-control_ctm" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
       
                 </div>
                 
@@ -148,7 +148,8 @@
                 <!-- /SINGLE CONTACT -->
 
                 <!-- V-CYCLED CONTACTS -->
-                <div v-for="(contact, index) in contacts"
+                <div v-for="(contact, index) in contactsFiltered"
+                @keyup.enter="contactsFilter"
                 :class="{'active': counter === index && contact.visible === true}"
                 @click="myFunction(index)"
                 class="contact d-flex align-items-center"
@@ -178,7 +179,7 @@
                   </div>
 
                 </div>
-                <!-- /SINGLE CONTACT -->
+                <!-- /V-CYCLED CONTACTS -->
 
                 
 

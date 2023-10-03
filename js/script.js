@@ -43,6 +43,8 @@ createApp({
 
       dt,
       myDate,
+
+      inputSearch: ''
       // myTime
 
     }
@@ -109,6 +111,11 @@ createApp({
 
     },
 
+    contactsFilter() {
+      return this.contacts.filter(contact => contact.name.includes('mich'))
+      // console.log(this.contacts)
+    },
+
     
     myTime() {
       return dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
@@ -126,6 +133,10 @@ createApp({
       return this.myDate;
     },
 
+    contactsFiltered(){
+      return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.inputSearch.toLowerCase()))
+    }
+
     
   },
 
@@ -135,7 +146,10 @@ createApp({
 
     console.log(dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS))
 
-    this.activeContact = this.contacts[this.counter]
+
+    
+
+    // this.activeContact = this.contacts[this.counter]
 
   }
 }).mount('#app')
