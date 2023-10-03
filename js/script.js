@@ -97,7 +97,7 @@ createApp({
           {
             date: this.myTime(),
             message: 'Ok',
-            status: 'sent'
+            status: 'received'
           },
   
         )
