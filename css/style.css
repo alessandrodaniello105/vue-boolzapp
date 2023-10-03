@@ -22,6 +22,21 @@ body {
   height: 100vh;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.btn_ctm {
+  padding: 7px 20px;
+  margin-top: 30px;
+}
+
 /* 
 i.fa-solid {
   font-size: 25px;
@@ -354,9 +369,9 @@ section .conversation-box {
 
 section .blank-page {
   background-color: var(--bg-blank);
-  background-image: url(../img/bg_blank.png);
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-image: url(../img/bg_blank.png); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   width: 100%;
   height: 100%;
   position: absolute;
