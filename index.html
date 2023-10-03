@@ -4,8 +4,13 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   
+  <!-- Vue.Js v3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+
+  <!-- Luxon v3.4.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+
   <!-- Font-Awesome v6.4.2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous"/>
 
@@ -18,8 +23,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-  <!-- Vue.Js v3 -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+ 
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/style.css">  
@@ -197,7 +201,7 @@
 
               <div class="img-box d-flex align-items-center float-start">
 
-                <img class="avatar" src="./img/avatar_2.jpg" alt="Your avatar">
+                <img class="avatar" :src="activeContact.avatar" :alt="activeContact.name + ' avatar'">
 
               </div>
 
@@ -264,7 +268,7 @@
                   <span>messaggio di prova ricevuto</span>
                   <span class="time-msg">11:11</span>
                 </div> -->
-
+                <a href="#peppe"></a>
               </div>
 
             </div>
@@ -272,18 +276,34 @@
             <!-- INPUT MESSAGE BOX -->
             <div class="send-message-box d-flex justify-content-evenly align-items-center">
 
+
+              <!-- EMOJI BUTTON -->
               <div class="icon-box">
                 <i class="fa-regular fa-face-smile"></i>
               </div>
+              <!-- /EMOJI BUTTON -->
 
-              <input type="text" class="message-input-text w-75" placeholder="Scrivi un messaggio">
 
+              <!-- INPUT TEXT -->
+              <input
+              v-model="inputMessage"
+              type="text"
+              class="message-input-text w-75"
+              placeholder="Scrivi un messaggio"
+              @keyup.enter="sendMsg"
+              >
+              <!-- /INPUT TEXT -->
+
+
+              <!-- VOICE MSG BUTTON -->
               <div class="icon-box">
                 <i class="fa-solid fa-microphone"></i>
               </div>
+              <!-- /VOICE MSG BUTTON -->
+
 
             </div>
-            <!-- INPUT MESSAGE BOX -->
+            <!-- /INPUT MESSAGE BOX -->
 
 
 
@@ -298,6 +318,7 @@
     </div>
 
   </div>
+  
 
   <script type="module" src="./js/script.js"></script>
 </body>

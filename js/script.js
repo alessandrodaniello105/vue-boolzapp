@@ -1,9 +1,10 @@
-import contacts from "./contacts.js";
+const { createApp } = Vue;
 
+const chatContainer = document.querySelector('.conversation-box')
+
+import { contacts } from "./contacts.js";
 
 // console.log(contacts)
-
-const {createApp} = Vue;
 
 createApp({
   data() {
@@ -13,7 +14,8 @@ createApp({
 
       counter: 1,
       activeContact: '',
-
+      inputMessage: '',
+      chatContainer
     }
   },
 
@@ -42,6 +44,28 @@ createApp({
 
     isSent(message) {
       return (message.status === 'sent') ? 'sent-msg' : 'received-msg'
+    },
+
+    sendMsg() {
+      console.log(this.activeContact.messages)
+      this.activeContact.messages.push(
+        {
+          date: '10/01/2020 15:50:00',
+          message: this.inputMessage,
+          status: 'sent'
+      },
+      )
+      
+      this.inputMessage = ''
+
+      this.autoScroll()
+      
+      console.log(this.activeContact.messages)
+    },
+
+    autoScroll() {
+      window.scrollBy(100, 200)
+      
     }
 
   },
