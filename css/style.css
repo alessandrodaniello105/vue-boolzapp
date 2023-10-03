@@ -200,7 +200,6 @@ aside .aside-bot .contacts-list {
   height: 100%;
   align-content: flex-start;
   overflow-y: scroll;
-
 }
 
 aside .aside-bot .contacts-list .contact {
@@ -209,7 +208,10 @@ aside .aside-bot .contacts-list .contact {
   height: 82px;
   border-top: 1px solid #F8F8F8;
   cursor: pointer;
+}
 
+aside .aside-bot .contacts-list .contact:hover {
+  background-color: rgba(0, 0, 0, .03);
 }
 
 .contact.active {
