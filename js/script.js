@@ -73,9 +73,9 @@ createApp({
       console.log(this.activeContact);
     },
 
-    isSent(message) {
-      return (message.status === 'sent') ? 'sent-msg' : 'received-msg';
-    },
+    // isSent(message) {
+    //   return (message.status === 'sent') ? 'sent-msg' : 'received-msg';
+    // },
 
     sendMsg() {
 
@@ -116,21 +116,23 @@ createApp({
     },
 
     
-    contactsFilter() {
-      return this.contacts.filter(contact => contact.name.includes('mich'))
-      // console.log(this.contacts)
+    // contactsFilter() {
+    //   return this.contacts.filter(contact => contact.name.includes('mich'))
+    //   // console.log(this.contacts)
+    // },
+
+    resetFilter() {
+      this.inputSearch = '';
     },
-
-
 
     
     myTime() {
       return dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
     },
 
-    autoScroll() {
-      window.scrollBy(100, 200);      
-    }
+    // autoScroll() {
+    //   window.scrollBy(100, 200);      
+    // }
 
   },
 

@@ -105,7 +105,15 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </span>
       
-                  <input v-model="inputSearch" type="text" class="form-control text-control_ctm" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                  <input
+                  v-model="inputSearch"
+                  @keyup.escape="resetFilter"
+                  type="text"
+                  class="form-control text-control_ctm"
+                  placeholder="Cerca o inizia una nuova chat"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                  >
       
                 </div>
                 
