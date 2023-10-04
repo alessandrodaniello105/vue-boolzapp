@@ -7,8 +7,15 @@
   --bg-received-msg: #FFFFFF;
   --bg-blank-dark: #212E35;
   --bg-blank-light: #EFF2F5;
+  --bg-dark-main: #0B1317;
+
+  --bg-dark-primary: #1F2C33;
+  --bg-dark-secondary: #111B21;
+  
+  --text-dark-name-contact: #E9EDEF;
 
   --icons-primary: #B1B1B1;
+  --icons-dark: #AEBAC1;
 }
 
 * {
@@ -52,6 +59,13 @@ i.fa-solid {
   border: 1px solid black;
 }
 
+.test-btn {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 1px solid red;
+  border-radius: 50%;
+}
 
 .time-msg {
   color: #B4B3B5;
@@ -110,6 +124,11 @@ img.avatar {
   background: linear-gradient(0deg, var(--bg-grey) 0 85%, var(--bg-green) 85% 100%);
 }
 
+.main-wrapper.dark {
+  background: none;
+  background-color: var(--bg-dark-main);
+}
+
 .main-wrapper .container-ctm {
   background-color: var(--bg-light-grey);
   width: 85%;
@@ -119,6 +138,11 @@ img.avatar {
   margin: auto;
 }
 
+.main-wrapper .container-ctm.dark {
+  background-color: var(--bg-dark-primary);
+  
+}
+
 aside {
   /* width: 30%; */
   /* min-width: 380px; */
@@ -126,6 +150,10 @@ aside {
   border-right: 1px solid var(--icons-primary);
   /* border: 1px solid black; */
 
+}
+
+aside.dark {
+  border-right: 1px solid #252F33;
 }
 
 section {
@@ -234,18 +262,39 @@ aside .aside-bot .contacts-list .contact {
   cursor: pointer;
 }
 
+aside .aside-bot .contacts-list .contact.dark {
+  background-color: var(--bg-dark-secondary);
+  border-top: 1px solid var(--icons-primary);
+  color: #E9EDEF;
+
+}
+
 aside .aside-bot .contacts-list .contact:hover {
   background-color: rgba(0, 0, 0, .03);
 }
 
 
+
+/* aside .aside-bot .contacts-list .contact.dark:hover {
+  background-color: rgba(255, 255, 255, .001);
+} */
+
 aside .aside-bot .contacts-list .contact.active {
   background-color: var(--bg-active);
 }
 
+aside .aside-bot .contacts-list .contact.active.dark {
+  background-color: rgba(0, 0, 0, .8);
+}
+
 aside .aside-bot .contacts-list .contact.active:hover {
   background-color: var(--bg-active);
-}
+} */
+
+/* /* aside .aside-bot .contacts-list .contact.active.dark:hover {
+  background-color: rgba(0, 0, 0, .9);
+
+} */
 
 .contact .img-box{
   width: 60px;
@@ -440,7 +489,4 @@ section .send-message-box .message-input-text:focus-visible {
 .conversation-box .message:hover .delete-msg {
   /* z-index: 2; */
   opacity: 1;
-
-
-
 }

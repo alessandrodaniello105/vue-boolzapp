@@ -21,8 +21,15 @@ const second = String(dt.second).padStart(2, '0');
 const chatContainer = document.querySelector('.conversation-box');
 const downloadBtn = document.getElementById('wapp-download-btn');
 const imgAlert = document.getElementById('test-alert-img');
+const themeBtn = document.querySelector('.test-btn')
 
+console.log(themeBtn);
+let themedElements = document.getElementsByClassName('light')
+console.log('theme elements -> ', themedElements)
 
+// themeBtn.addEventListener(onclick, function(){
+//   console.log('hai cliccato il bottone del tema')
+// });
 
 function funnyAlert() {
   return alert('Ti consiglio di non cliccare su qualsiasi bottone che trovi in giro su internet. Per questa volta sei andato bene')
@@ -54,7 +61,8 @@ createApp({
       dt,
       myDate,
 
-      inputSearch: ''
+      inputSearch: '',
+      themedElements
       // myTime
 
     }
@@ -160,6 +168,18 @@ createApp({
         funnyAlert();
         console.log('hai cliccato')
       });
+    },
+
+    changeTheme() {
+
+      console.log('hai cliccato il bottone del tema')
+
+      console.log(this.themedElements)
+
+      // this.themedElements.forEach((element) => {
+      //   console.log(element)
+      // });
+
     }
 
   },

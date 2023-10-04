@@ -32,15 +32,15 @@
 </head>
 <body>
   
-  <div class="main-wrapper d-flex">
+  <div class="main-wrapper dark light d-flex">
     
-    <div class="container-ctm d-flex" id="app">
+    <div class="container-ctm dark light d-flex" id="app">
 
       <div class="container-fluid">
 
         <div class="row row-cols-2">
 
-          <aside class="col-4">
+          <aside class="col-4 dark light">
 
             <!-- ASIDE TOP -->
             <div class="aside-top">
@@ -57,6 +57,10 @@
 
                 <!-- RIGHT ICONS -->
                 <div class="right-icons d-flex justify-content-evenly align-items-center">
+
+                  <div class="icon-box">
+                    <div @click="changeTheme" class="test-btn"></div>
+                  </div>
 
                   <div class="icon-box">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -159,7 +163,7 @@
                 <div v-for="(contact, index) in contactsFiltered"
                 :class="{'active': counter === index && contact.visible === true}"
                 @click="setActive(index)"
-                class="contact d-flex align-items-center"
+                class="contact dark light d-flex align-items-center"
                 >
 
                   <div class="img-box">
