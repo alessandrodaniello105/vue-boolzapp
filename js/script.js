@@ -24,7 +24,7 @@ const second = String(dt.second).padStart(2, '0');
 const chatContainer = document.querySelector('.conversation-box');
 const delBtnContainer = document.querySelector('.delete-msg');
 
-delBtnContainer.innerHTML ='<i class="fa-solid fa-chevron-down"></i>'
+// delBtnContainer.innerHTML ='<i class="fa-solid fa-chevron-down"></i>'
 
 
 

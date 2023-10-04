@@ -162,7 +162,10 @@
                 class="contact d-flex align-items-center"
                 >
 
-                  <img class="avatar" :src="contact.avatar" :alt="contact.name + ' avatar'">
+                  <div class="img-box">
+                    <img class="avatar2" :src="contact.avatar" :alt="contact.name + ' avatar'">
+                  </div>
+                  
 
                   
                   <div class="text-box d-flex flex-column">
@@ -181,7 +184,7 @@
                     
                   </div>
                   
-                  <div class="contact-last-msg-time time-msg align-self-start">
+                  <div class="float-end ms-auto time-msg align-self-start">
                     <span>{{ getLastDate(contact) }}</span>
                   </div>
 
@@ -286,10 +289,25 @@
                   
                   class="message clearfix">
 
-                    <span v-if="message.message !== ''" @click="deleteMsg(index)" class="delete-msg"></span>
+                    <div v-if="message.message !== ''" @click="deleteMsg(index)" class="delete-msg">
+                      
+                    </div>
 
-                    <span>{{message.message}}</span>
-                    <span class="time-msg">{{ message.date }}</span>
+                    <!-- DROPDOWN MESSAGE TOOLBAR -->
+                    <div  v-if="message.message !== ''"  class="dropdown" >
+                      <button  class="delete-msg btn btn-toolbar dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" @click="deleteMsg(index)" href="#">Delete Message</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                      </ul>
+                    </div>
+                    <!-- /DROPDOWN MESSAGE TOOLBAR -->
+
+
+                    <p class="mt-2">{{message.message}}</p>
+                    <p class="time-msg mt-5">{{ message.date }}</p>
 
                   </div>
                 </div>

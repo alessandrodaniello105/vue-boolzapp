@@ -53,6 +53,12 @@ i.fa-solid {
 }
 
 
+.time-msg {
+  color: #B4B3B5;
+  font-size: 10px;
+  padding-right: 5px;
+}
+
 img.avatar {
   height: 50px;
   border-radius: 50%;
@@ -241,13 +247,22 @@ aside .aside-bot .contacts-list .contact.active:hover {
   background-color: var(--bg-active);
 }
 
-.contact img.avatar {
+.contact .img-box{
+  width: 60px;
   height: 60px;
   margin-left: 20px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.contact .img-box img.avatar2 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 
 .contact .text-box {
-  width: calc(100% - 80px);
+  width: 350px;
 }
 
 .contact .text-box .sub-text.contact-name {
@@ -272,16 +287,16 @@ section > .user-bar .text-box .sub-text.last-access {
   font-weight: 600;
 }
 
-.time-msg {
-  position: absolute;
-  color: #B4B3B5;
-}
-
 .contact .contact-last-msg-time {
   top: 5px;
   right: 20px;
   font-size: 11px;
   font-weight: 700;
+}
+
+.contact .time-msg {
+  margin-top: 5px;
+  padding-right: 15px;
 }
 
 
@@ -366,8 +381,10 @@ section .conversation-box {
 }
 
 .conversation-box .message .time-msg {
-  bottom: 5px;
+  position: absolute;
+  top: 0px;
   right: 5px;
+  color: #B4B3B5;
   font-size: 10px;
 }
 
@@ -407,14 +424,15 @@ section .send-message-box .message-input-text:focus-visible {
 
 .delete-msg {
   position: absolute;
+  top: 0px;
+  right: 0px;
   opacity: 0;
-  top: 5px;
-  right: 5px;
   display: inline-block;
-  width: 20px;
+  /* width: 20px; */
   height: 20px;
+  line-height: 7px;
   text-align: center;
-  content:'';
+  /* content:''; */
   background-color: transparent;
   transition: all .3s ease-in;
 }
