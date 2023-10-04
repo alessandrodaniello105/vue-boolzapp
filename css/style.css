@@ -405,21 +405,21 @@ section .send-message-box .message-input-text:focus-visible {
   box-shadow: none;
 }
 
-.delete-msg::before {
+.delete-msg {
   position: absolute;
   opacity: 0;
   top: 5px;
   right: 5px;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   text-align: center;
-  content: 'X';
+  content:'';
   background-color: transparent;
   transition: all .3s ease-in;
 }
 
-.conversation-box .message:hover .delete-msg::before {
+.conversation-box .message:hover .delete-msg {
   /* z-index: 2; */
   opacity: 1;
 

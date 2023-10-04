@@ -21,7 +21,13 @@ const second = String(dt.second).padStart(2, '0');
 
 // console.log(dt.now().year);
 
-const chatContainer = document.querySelector('.conversation-box')
+const chatContainer = document.querySelector('.conversation-box');
+const delBtnContainer = document.querySelector('.delete-msg');
+
+delBtnContainer.innerHTML ='<i class="fa-solid fa-chevron-down"></i>'
+
+
+
 
 import { contacts } from "./contacts.js";
 
@@ -122,11 +128,18 @@ createApp({
     deleteMsg(index) {
       
       if (this.activeContact.messages.length == 1) {
-        this.activeContact.messages = [''];
+        this.activeContact.messages = [
+          {
+            date: '',
+            message: ''
+          }
+        ];
+        
       } else {
         this.activeContact.messages.splice(index, 1);
         console.log('index ->', index, 'length ->', this.activeContact.messages.length )
       }
+
     },
 
     

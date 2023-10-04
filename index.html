@@ -286,7 +286,7 @@
                   
                   class="message clearfix">
 
-                    <span @click="deleteMsg(index)" class="delete-msg"></span>
+                    <span v-if="message.message !== ''" @click="deleteMsg(index)" class="delete-msg"></span>
 
                     <span>{{message.message}}</span>
                     <span class="time-msg">{{ message.date }}</span>
