@@ -356,6 +356,10 @@ section .conversation-box {
   background-color: var(--bg-sent-msg);
   align-self: flex-end;
 }
+/* 
+.conversation-box .message.sent:hover {
+  border: 3px solid black;
+} */
 
 .conversation-box .message.received {
   background-color: var(--bg-received-msg);
@@ -402,9 +406,23 @@ section .send-message-box .message-input-text:focus-visible {
 }
 
 .delete-msg::before {
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  right: 5px;
   display: inline-block;
   width: 30px;
   height: 30px;
+  text-align: center;
   content: 'X';
-  background-color: white;
+  background-color: transparent;
+  transition: all .3s ease-in;
+}
+
+.conversation-box .message:hover .delete-msg::before {
+  /* z-index: 2; */
+  opacity: 1;
+
+
+
 }

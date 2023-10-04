@@ -120,8 +120,13 @@ createApp({
     },
 
     deleteMsg(index) {
-      this.activeContact.messages.splice(index, 1)
-      // this.activeContact.messages.push('')
+      
+      if (this.activeContact.messages.length == 1) {
+        this.activeContact.messages = [''];
+      } else {
+        this.activeContact.messages.splice(index, 1);
+        console.log('index ->', index, 'length ->', this.activeContact.messages.length )
+      }
     },
 
     
