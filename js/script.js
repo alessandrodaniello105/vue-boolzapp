@@ -157,6 +157,8 @@ createApp({
       return dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
     },
 
+  
+
     // autoScroll() {
     //   window.scrollBy(100, 200);      
     // }
@@ -167,6 +169,10 @@ createApp({
 
     date() {
       return this.myDate;
+    },
+
+    myShortTime() {
+      return dt.setLocale('it').toLocaleString(initDate.TIME_24_SIMPLE)
     },
 
     contactsFiltered(){
