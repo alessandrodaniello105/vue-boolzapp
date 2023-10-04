@@ -32,15 +32,15 @@
 </head>
 <body>
   
-  <div :class="{'dark': isDark}" class="main-wrapper d-flex">
+  <div class="main-wrapper light d-flex">
     
-    <div class="container-ctm d-flex" :class="{'dark': isDark}" id="app">
+    <div class="container-ctm light d-flex"  id="app">
 
       <div class="container-fluid">
 
         <div class="row row-cols-2">
 
-          <aside class="col-4 dark light">
+          <aside class="col-4 light">
 
             <!-- ASIDE TOP -->
             <div class="aside-top">
@@ -58,9 +58,13 @@
                 <!-- RIGHT ICONS -->
                 <div class="right-icons d-flex justify-content-evenly align-items-center">
 
+                  
+                  <!-- SWITCH THEME BUTTON -->
                   <div class="icon-box">
-                    <div @click="isDark = !isDark" class="test-btn"></div>
+                    <div @click.stop="changeTheme"  class="test-btn"></div>
                   </div>
+                  <!-- /SWITCH THEME BUTTON -->
+
 
                   <div class="icon-box">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -163,7 +167,7 @@
                 <div v-for="(contact, index) in contactsFiltered"
                 :class="{'active': counter === index && contact.visible === true, 'dark': isDark}"
                 @click="setActive(index)"
-                class="contact d-flex align-items-center"
+                class="contact light d-flex align-items-center"
                 >
 
                   <div class="img-box">

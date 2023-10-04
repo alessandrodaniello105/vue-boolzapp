@@ -24,7 +24,7 @@ const imgAlert = document.getElementById('test-alert-img');
 const themeBtn = document.querySelector('.test-btn')
 
 console.log(themeBtn);
-let themedElements = document.getElementsByClassName('light')
+let themedElements = document.querySelectorAll('.light')
 console.log('theme elements -> ', themedElements)
 
 // themeBtn.addEventListener(onclick, function(){
@@ -178,7 +178,13 @@ createApp({
 
       console.log('hai cliccato il bottone del tema')
 
-      console.log(this.themedElements)
+      // console.log(this.themedElements)
+
+      this.themedElements.forEach(element => {
+        element.classList.toggle('dark')
+      })
+      this.isDark = !this.isDark
+      console.log(this.isDark)
 
       // this.themedElements.forEach((element) => {
       //   console.log(element)
