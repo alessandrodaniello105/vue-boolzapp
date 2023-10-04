@@ -14,15 +14,19 @@ const minute = String(dt.minute).padStart(2, '0');
 const second = String(dt.second).padStart(2, '0');
 // const myTimeStr =  hour + ':' + minute + ':' + second;
 // const myTime = dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
-// let message;
 
-// message = day + '/' + month + '/' + year
-// console.log(message);
 
 // console.log(dt.now().year);
 
 const chatContainer = document.querySelector('.conversation-box');
-const delBtnContainer = document.querySelector('.delete-msg');
+const downloadBtn = document.getElementById('wapp-download-btn');
+const imgAlert = document.getElementById('test-alert-img');
+
+
+
+function funnyAlert() {
+  return alert('Ti consiglio di non cliccare su qualsiasi bottone che trovi in giro su internet. Per questa volta sei andato bene')
+}
 
 // delBtnContainer.innerHTML ='<i class="fa-solid fa-chevron-down"></i>'
 
@@ -146,6 +150,16 @@ createApp({
 
 
       return `${lastDate} ${lastTime.split(':').splice(0, 2).join(':')}`
+    },
+
+    getSure() {
+      downloadBtn.addEventListener('click', funnyAlert);
+  
+  
+      imgAlert.addEventListener('click', function(){
+        funnyAlert();
+        console.log('hai cliccato')
+      });
     }
 
   },
@@ -169,6 +183,7 @@ createApp({
     console.log(dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS))
 
     // this.activeContact = this.contacts[this.counter]
-
+    this.getSure()
   }
+
 }).mount('#app')
