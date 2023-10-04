@@ -12,7 +12,7 @@ const myDate = day + '/' + month + '/' + year;
 const hour = String(dt.hour).padStart(2, '0');
 const minute = String(dt.minute).padStart(2, '0');
 const second = String(dt.second).padStart(2, '0');
-// const myTime =  hour + ':' + minute + ':' + second;
+// const myTimeStr =  hour + ':' + minute + ':' + second;
 // const myTime = dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
 // let message;
 
@@ -58,19 +58,6 @@ createApp({
 
   methods: {
 
-    // readConv(){
-      // contact.visible = false;
-      // if (contact.visible) {
-      //   ''
-      // } else {
-      //   contact.visible = true
-      // }
-
-      // return this.contacts.filter(contact => {
-      //   console.log(contact.visible)
-      // })
-    // }
-
     setActive(index) {
       this.counter = index;
 
@@ -79,13 +66,7 @@ createApp({
       console.log(this.activeContact);
     },
 
-    // isSent(message) {
-    //   return (message.status === 'sent') ? 'sent-msg' : 'received-msg';
-    // },
-
     sendMsg() {
-
-      console.log(this.activeContact.messages);
 
       this.activeContact.messages.push(
 
@@ -104,25 +85,24 @@ createApp({
 
           {
             date: this.myTime(),
-            message: 'Ok',
+            message: 'Ok!',
             status: 'received'
           },
   
         )
       }, 1000)
 
-      // this.autoScroll();2
       
       console.log(this.activeContact.messages);
 
     },
 
     getLastMessage(contact) {
-      return contact.messages[contact.messages.length - 1].message
+      return contact.messages.at(- 1).message
     },
 
     getLastDate(contact) {
-      return contact.messages[contact.messages.length - 1].date
+      return contact.messages.at(- 1).date
     },
 
     deleteMsg(index) {
@@ -142,26 +122,31 @@ createApp({
 
     },
 
-    
-    // contactsFilter() {
-    //   return this.contacts.filter(contact => contact.name.includes('mich'))
-    //   // console.log(this.contacts)
-    // },
-
     resetFilter() {
       this.inputSearch = '';
     },
-
+    
     
     myTime() {
       return dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS);
     },
+    
+    
+    splitTime(contact) {
+      const lastDate = this.getLastDate(contact).split(' ').at(0);
+      const lastTime = this.getLastDate(contact).split(' ').at(1);
+      // console.log(lastDate)
+      // console.log(lastTime)
 
-  
 
-    // autoScroll() {
-    //   window.scrollBy(100, 200);      
-    // }
+
+      // if (lastDate === myDate) {
+      //   console.log('OGGI!!')
+      // }
+
+
+      return `${lastDate} ${lastTime.split(':').splice(0, 2).join(':')}`
+    }
 
   },
 
@@ -170,15 +155,10 @@ createApp({
     date() {
       return this.myDate;
     },
-
-    myShortTime() {
-      return dt.setLocale('it').toLocaleString(initDate.TIME_24_SIMPLE)
-    },
-
+    
     contactsFiltered(){
       return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.inputSearch.toLowerCase()))
     }
-
     
   },
 

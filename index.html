@@ -185,7 +185,7 @@
                   </div>
                   
                   <div class="float-end ms-auto time-msg align-self-start">
-                    <span>{{ myShortTime }}</span>
+                    <span>{{ getLastDate(contact) }}</span>
                   </div>
 
                 </div>
@@ -244,7 +244,7 @@
                 </div>
 
                 <div class="sub-text last-access">
-                  <span>Ultimo accesso oggi alle {{ getLastDate(activeContact) }}</span>
+                  <span>Ultimo accesso {{ getLastDate(activeContact) }}</span>
                 </div>
                 
               </div>
@@ -289,10 +289,7 @@
                   
                   class="message clearfix">
 
-                    <div v-if="message.message !== ''" @click="deleteMsg(index)" class="delete-msg">
-                      
-                    </div>
-
+                    
                     <!-- DROPDOWN MESSAGE TOOLBAR -->
                     <div  v-if="message.message !== ''"  class="dropdown" >
                       <button  class="delete-msg btn btn-toolbar dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
