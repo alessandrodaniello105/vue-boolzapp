@@ -24,8 +24,8 @@ const imgAlert = document.getElementById('test-alert-img');
 const themeBtn = document.querySelector('.test-btn')
 
 console.log(themeBtn);
-let themedElements = document.querySelectorAll('.light')
-console.log('theme elements -> ', themedElements)
+// let themedElements = document.querySelectorAll('.light')
+// console.log('theme elements -> ', themedElements)
 
 // themeBtn.addEventListener(onclick, function(){
 //   console.log('hai cliccato il bottone del tema')
@@ -63,7 +63,7 @@ createApp({
 
       inputSearch: '',
       
-      themedElements,
+      // themedElements,
 
       isDark: false
 
@@ -165,30 +165,22 @@ createApp({
     },
 
     getSure() {
+      
       downloadBtn.addEventListener('click', funnyAlert);
-  
-  
+    
       imgAlert.addEventListener('click', function(){
         funnyAlert();
-        console.log('hai cliccato')
       });
+
     },
 
     changeTheme() {
+      let themedElements = document.querySelectorAll('.light')
 
-      console.log('hai cliccato il bottone del tema')
-
-      // console.log(this.themedElements)
-
-      this.themedElements.forEach(element => {
+      themedElements.forEach(element => {
         element.classList.toggle('dark')
       })
       this.isDark = !this.isDark
-      console.log(this.isDark)
-
-      // this.themedElements.forEach((element) => {
-      //   console.log(element)
-      // });
 
     }
 

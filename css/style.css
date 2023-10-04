@@ -490,3 +490,7 @@ section .send-message-box .message-input-text:focus-visible {
   /* z-index: 2; */
   opacity: 1;
 }
+
+.user-name.dark {
+  color: var(--text-dark-name-contact);
+}
