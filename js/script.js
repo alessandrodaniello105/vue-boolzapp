@@ -105,7 +105,7 @@ createApp({
         )
       }, 1000)
 
-      this.autoScroll();
+      // this.autoScroll();2
       
       console.log(this.activeContact.messages);
 
@@ -117,6 +117,11 @@ createApp({
 
     getLastDate(contact) {
       return contact.messages[contact.messages.length - 1].date
+    },
+
+    deleteMsg(index) {
+      this.activeContact.messages.splice(index, 1)
+      // this.activeContact.messages.push('')
     },
 
     

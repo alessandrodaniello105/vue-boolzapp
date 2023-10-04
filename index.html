@@ -204,6 +204,7 @@
           <!-- CONVERSATION/CONTENT SECTION -->
           <section class="col-8 content">
 
+            <!-- CTA/SPLASH IMG -->
             <div  v-if="activeContact === ''"  class="blank-page">
 
               <div class="cta pt-5 h-100 d-flex flex-column justify-content-center align-items-center">
@@ -221,6 +222,8 @@
               </div>
 
             </div>
+            <!-- /CTA/SPLASH IMG -->
+
             
             <!-- ACTIVE CONTACT BAR  -->
             <div v-else class="user-bar d-flex">
@@ -278,10 +281,12 @@
 
                 <div class="chat-container d-flex flex-column">
 
-                  <div v-for="message in activeContact.messages" 
+                  <div v-for="(message, index) in activeContact.messages" 
                   :class="message.status"
                   
                   class="message clearfix">
+
+                    <span @click="deleteMsg(index)" class="delete-msg"></span>
 
                     <span>{{message.message}}</span>
                     <span class="time-msg">{{ message.date }}</span>

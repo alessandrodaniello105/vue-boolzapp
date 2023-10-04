@@ -400,3 +400,11 @@ section .send-message-box .message-input-text {
 section .send-message-box .message-input-text:focus-visible {
   box-shadow: none;
 }
+
+.delete-msg::before {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  content: 'X';
+  background-color: white;
+}
