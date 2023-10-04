@@ -81,10 +81,27 @@ img.avatar {
   margin: auto 0;
 }
 
+
+img.avatar2 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* GENERALS */
 .img-box {
   height: 100%;
 }
+
+
+.avatar-img-box {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
 
 .row {
   height: 100%;
@@ -96,7 +113,7 @@ img.avatar {
 
 /* TEXT-BOX */
 .text-box {
-  width: calc(100% - 50px);
+  /* width: calc(100% - 50px); */
   height: 100%;
   padding-left: 10px;
 }
@@ -264,7 +281,7 @@ aside .aside-bot .contacts-list .contact {
 
 aside .aside-bot .contacts-list .contact.dark {
   background-color: var(--bg-dark-secondary);
-  border-top: 1px solid var(--icons-primary);
+  border-top: 1px solid var(--bg-blank-dark);
   color: #E9EDEF;
 
 }
@@ -296,19 +313,6 @@ aside .aside-bot .contacts-list .contact.active:hover {
 
 } */
 
-.contact .img-box{
-  width: 60px;
-  height: 60px;
-  margin-left: 20px;
-  border-radius: 50%;
-  overflow:hidden;
-}
-
-.contact .img-box img.avatar2 {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-}
 
 .contact .text-box {
   width: 350px;

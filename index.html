@@ -170,7 +170,7 @@
                 class="contact light d-flex align-items-center"
                 >
 
-                  <div class="img-box">
+                  <div class="avatar-img-box">
                     <img class="avatar2" :src="contact.avatar" :alt="contact.name + ' avatar'">
                   </div>
                   
@@ -237,17 +237,17 @@
 
             
             <!-- ACTIVE CONTACT BAR  -->
-            <div v-else class="user-bar d-flex">
+            <div v-else class="user-bar clearfix">
 
-              <div class="img-box d-flex align-items-center float-start">
+              <div class="img-box clearfix d-flex align-items-center float-start">
 
                 <img class="avatar" :src="activeContact.avatar" :alt="activeContact.name + ' avatar'">
 
               </div>
 
-              <div class="text-box d-flex flex-column">
+              <div class="text-box clearfix d-flex flex-column float-start">
 
-                <div class="sub-text contact-name">
+                <div class="sub-text user-name light contact-name">
                   <p>{{ activeContact.name }}</p>
                 </div>
 
@@ -259,7 +259,7 @@
 
 
               <!-- RIGHT ICONS -->
-              <div class="right-icons d-flex justify-content-evenly align-items-center">
+              <div class="right-icons clearfix d-flex justify-content-evenly align-items-center">
 
                 <div class="icon-box">
                   <i class="fa-solid fa-magnifying-glass"></i>
