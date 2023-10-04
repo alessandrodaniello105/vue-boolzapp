@@ -62,7 +62,11 @@ createApp({
       myDate,
 
       inputSearch: '',
-      themedElements
+      
+      themedElements,
+
+      isDark: false
+
       // myTime
 
     }

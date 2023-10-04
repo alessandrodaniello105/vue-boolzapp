@@ -32,9 +32,9 @@
 </head>
 <body>
   
-  <div class="main-wrapper dark light d-flex">
+  <div :class="{'dark': isDark}" class="main-wrapper d-flex">
     
-    <div class="container-ctm dark light d-flex" id="app">
+    <div class="container-ctm d-flex" :class="{'dark': isDark}" id="app">
 
       <div class="container-fluid">
 
@@ -59,7 +59,7 @@
                 <div class="right-icons d-flex justify-content-evenly align-items-center">
 
                   <div class="icon-box">
-                    <div @click="changeTheme" class="test-btn"></div>
+                    <div @click="isDark = !isDark" class="test-btn"></div>
                   </div>
 
                   <div class="icon-box">
@@ -161,9 +161,9 @@
 
                 <!-- V-CYCLED CONTACTS -->
                 <div v-for="(contact, index) in contactsFiltered"
-                :class="{'active': counter === index && contact.visible === true}"
+                :class="{'active': counter === index && contact.visible === true, 'dark': isDark}"
                 @click="setActive(index)"
-                class="contact dark light d-flex align-items-center"
+                class="contact d-flex align-items-center"
                 >
 
                   <div class="img-box">
