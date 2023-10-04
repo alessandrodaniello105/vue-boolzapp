@@ -65,7 +65,7 @@ createApp({
       // })
     // }
 
-    myFunction(index) {
+    setActive(index) {
       this.counter = index;
 
       this.contacts[this.counter].visible = true;
@@ -140,14 +140,11 @@ createApp({
     
   },
 
-  mounted() {
+  created() {
 
     // console.log(this.contacts)
 
     console.log(dt.setLocale('it').toLocaleString(initDate.TIME_24_WITH_SECONDS))
-
-
-    
 
     // this.activeContact = this.contacts[this.counter]
 

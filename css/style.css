@@ -5,7 +5,8 @@
   --bg-active: #E9EBEB;
   --bg-sent-msg: #D5F9BA;
   --bg-received-msg: #FFFFFF;
-  --bg-blank: #212E35;
+  --bg-blank-dark: #212E35;
+  --bg-blank-light: #EFF2F5;
 
   --icons-primary: #B1B1B1;
 }
@@ -351,12 +352,12 @@ section .conversation-box {
   border-radius: 10px;
 }
 
-.conversation-box .message.sent-msg {
+.conversation-box .message.sent {
   background-color: var(--bg-sent-msg);
   align-self: flex-end;
 }
 
-.conversation-box .message.received-msg {
+.conversation-box .message.received {
   background-color: var(--bg-received-msg);
 }
 
@@ -368,7 +369,7 @@ section .conversation-box {
 
 
 section .blank-page {
-  background-color: var(--bg-blank);
+  background-color: var(--bg-blank-dark);
   /* background-image: url(../img/bg_blank.png); */
   /* background-position: center; */
   /* background-repeat: no-repeat; */

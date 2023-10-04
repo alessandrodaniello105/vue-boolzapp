@@ -150,7 +150,7 @@
                 <!-- V-CYCLED CONTACTS -->
                 <div v-for="(contact, index) in contactsFiltered"
                 :class="{'active': counter === index && contact.visible === true}"
-                @click="myFunction(index)"
+                @click="setActive(index)"
                 class="contact d-flex align-items-center"
                 >
 
@@ -259,7 +259,7 @@
             </div>
             <!-- /ACTIVE CONTACT BAR  -->
 
-
+            <!-- CHAT SECTION -->
             <div class="conversation-box">
 
               <div class="container_ctm">
@@ -269,13 +269,16 @@
                 </div> -->
 
                 <div class="chat-container d-flex flex-column">
+
                   <div v-for="message in activeContact.messages" 
-                  :class="isSent(message)"
+                  :class="message.status"
                   
                   class="message clearfix">
+
                     <span>{{message.message}}</span>
                     <span class="time-msg">{{ message.date }}</span>
-                </div>
+
+                  </div>
                 </div>
 
                 <!-- <div class="sent-msg message">
@@ -296,6 +299,8 @@
               </div>
 
             </div>
+            <!-- /CHAT SECTION -->
+
 
             <!-- INPUT MESSAGE BOX -->
             <div  class="send-message-box d-flex justify-content-evenly align-items-center">
