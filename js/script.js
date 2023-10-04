@@ -111,10 +111,17 @@ createApp({
 
     },
 
+    getLastMessage(contact) {
+      return contact.messages[contact.messages.length - 1].message
+    },
+
+    
     contactsFilter() {
       return this.contacts.filter(contact => contact.name.includes('mich'))
       // console.log(this.contacts)
     },
+
+
 
     
     myTime() {
