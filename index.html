@@ -182,7 +182,7 @@
                   </div>
                   
                   <div class="contact-last-msg-time time-msg align-self-start">
-                    <span>12:00</span>
+                    <span>{{ getLastDate(contact) }}</span>
                   </div>
 
                 </div>
@@ -238,7 +238,7 @@
                 </div>
 
                 <div class="sub-text last-access">
-                  <span>Ultimo accesso oggi alle 12:00</span>
+                  <span>Ultimo accesso oggi alle {{ getLastDate(activeContact) }}</span>
                 </div>
                 
               </div>

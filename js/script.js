@@ -115,6 +115,10 @@ createApp({
       return contact.messages[contact.messages.length - 1].message
     },
 
+    getLastDate(contact) {
+      return contact.messages[contact.messages.length - 1].date
+    },
+
     
     // contactsFilter() {
     //   return this.contacts.filter(contact => contact.name.includes('mich'))
